@@ -7,7 +7,16 @@ def printBoard():
         if (x != 2):
             print(HorizontalLine)
 
-print('A Game of Tic-Tac-Toe!')
-userSign = input("Enter the sign you want to be (X or O): ")
-print(userSign)
+def determineSign(userSign):
+    if (userSign == 'O'):
+        computerSign = 'X'
+    else:
+        computerSign = 'O'
+    return computerSign
+
+
+print("A Game of Tic-Tac-Toe!")
+userSign = raw_input("Enter the sign you want to be (X or O): ")
+computerSign = determineSign(userSign)
+
 printBoard()
